@@ -1,20 +1,20 @@
 import { createApp } from 'vue'
-
 import Cookies from 'js-cookie'
 
+// Element Plus
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import locale from 'element-plus/es/locale/lang/zh-cn'
 
-import '@/assets/styles/index.scss' // global css
+// 样式
+import '@/assets/styles/index.scss'
 
+// 组件
 import App from './App'
 import store from './store'
 import router from './router'
-import directive from './directive' // directive
-
-// 注册指令
-import plugins from './plugins' // plugins
+import directive from './directive'
+import plugins from './plugins'
 import { download } from '@/utils/request'
 
 // svg图标
@@ -22,27 +22,23 @@ import 'virtual:svg-icons-register'
 import SvgIcon from '@/components/SvgIcon'
 import elementIcons from '@/components/SvgIcon/svgicon'
 
-import './permission' // permission control
+// 权限控制
+import './permission'
 
+// 工具函数
 import { useDict } from '@/utils/dict'
 import { parseTime, resetForm, addDateRange, handleTree, selectDictLabel, selectDictLabels } from '@/utils/ruoyi'
 
-// 分页组件
+// 组件
 import Pagination from '@/components/Pagination'
-// 自定义表格工具组件
 import RightToolbar from '@/components/RightToolbar'
-// 富文本组件
 import Editor from "@/components/Editor"
-// 文件上传组件
 import FileUpload from "@/components/FileUpload"
-// 图片上传组件
 import ImageUpload from "@/components/ImageUpload"
-// 图片预览组件
 import ImagePreview from "@/components/ImagePreview"
-// 自定义树选择组件
 import TreeSelect from '@/components/TreeSelect'
-// 字典标签组件
 import DictTag from '@/components/DictTag'
+
 
 const app = createApp(App)
 
@@ -65,12 +61,12 @@ app.component('ImageUpload', ImageUpload)
 app.component('ImagePreview', ImagePreview)
 app.component('RightToolbar', RightToolbar)
 app.component('Editor', Editor)
+app.component('svg-icon', SvgIcon)
 
 app.use(router)
 app.use(store)
 app.use(plugins)
 app.use(elementIcons)
-app.component('svg-icon', SvgIcon)
 
 directive(app)
 

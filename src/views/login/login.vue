@@ -65,16 +65,17 @@
     </el-form>
     <!--  底部  -->
     <div class="el-login-footer">
-      <span>Copyright © 2018-2024 ruoyi.vip All Rights Reserved.</span>
+      <span>Copyright © 2024-2025 robot All Rights Reserved.</span>
     </div>
   </div>
 </template>
 
 <script setup>
-import { getCodeImg } from "@/api/login"
+import { getCodeImg } from "@/api/login.js"
 import Cookies from "js-cookie"
-import { encrypt, decrypt } from "@/utils/jsencrypt"
-import useUserStore from "@/store/modules/user"
+import { encrypt, decrypt } from "@/utils/jsencrypt.js"
+import useUserStore from "@/store/modules/user.js"
+import { useRoute, useRouter } from "vue-router"
 
 const userStore = useUserStore()
 const route = useRoute()
@@ -174,7 +175,7 @@ getCookie()
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: url("../assets/images/login-background.jpg");
+  background-image: url("../../assets/images/login-background.jpg");
   background-size: cover;
 }
 

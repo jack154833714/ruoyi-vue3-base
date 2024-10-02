@@ -77,7 +77,7 @@
 
 <script setup>
 import { ElMessageBox } from "element-plus";
-import { getCodeImg, register } from "@/api/login";
+import { getCodeImg, register } from "@/api/login.js";
 
 const router = useRouter();
 const { proxy } = getCurrentInstance();
@@ -160,7 +160,7 @@ getCode();
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-image: url("../assets/images/login-background.jpg");
+  background-image: url("../../assets/images/login-background.jpg");
   background-size: cover;
 }
 .title {
