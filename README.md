@@ -3,7 +3,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/yangzongzhuan/RuoYi-Vue3.git
+git clone https://github.com/jack154833714/ruoyi-vue3-base.git
 
 # 进入项目目录
 cd RuoYi-Vue3
