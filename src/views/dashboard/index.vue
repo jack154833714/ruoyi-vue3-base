@@ -145,7 +145,7 @@ function goTarget(url) {
   }
 
   h4 {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   h2 {
