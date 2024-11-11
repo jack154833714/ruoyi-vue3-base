@@ -128,7 +128,7 @@ export function sprintf(str) {
 
 // 转换字符串，undefined,null等转化为""
 export function parseStrEmpty(str) {
-  if (!str || str == "undefined" || str == "null") {
+  if (!str || str === "undefined" || str === "null") {
     return "";
   }
   return str;
@@ -138,7 +138,7 @@ export function parseStrEmpty(str) {
 export function mergeRecursive(source, target) {
   for (var p in target) {
     try {
-      if (target[p].constructor == Object) {
+      if (target[p].constructor === Object) {
         source[p] = mergeRecursive(source[p], target[p]);
       } else {
         source[p] = target[p];
